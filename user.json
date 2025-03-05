@@ -55,7 +55,7 @@
         {
             "_id":"2",
             "name":"Pankaj",
-            "profileImagePath":"/assests/users/1/test-2.webp",
+            "profileImagePath":"/assests/users/2/test-2.webp",
             "stories":[
                 {
                     "fileType":"image",
@@ -77,7 +77,7 @@
         {
             "_id":"3",
             "name":"Mike",
-            "profileImagePath":"/assests/users/1/test-3.webp",
+            "profileImagePath":"/assests/users/3/test-3.webp",
             "stories":[
                
                 {
@@ -110,7 +110,7 @@
         {
             "_id":"4",
             "name":"Tanjen",
-            "profileImagePath":"/assests/users/1/test-4.webp",
+            "profileImagePath":"/assests/users/4/test-4.webp",
             "stories":[
                 {
                     "fileType":"image",
@@ -122,7 +122,7 @@
         {
             "_id":"5",
             "name":"Nimish",
-            "profileImagePath":"/assests/users/1/test-5.webp",
+            "profileImagePath":"/assests/users/5/test-5.webp",
             "stories":[
                 {
                     "fileType":"image",
@@ -144,7 +144,7 @@
         {
             "_id":"6",
             "name":"Abhi",
-            "profileImagePath":"/assests/users/1/test-6.webp",
+            "profileImagePath":"/assests/users/6/test-6.webp",
             "stories":[
                 {
                     "fileType":"image",
@@ -161,7 +161,7 @@
         {
             "_id":"7",
             "name":"Tanjiro",
-            "profileImagePath":"/assests/users/1/test-7.webp",
+            "profileImagePath":"/assests/users/7/test-7.webp",
             "stories":[
                 {
                     "fileType":"image",

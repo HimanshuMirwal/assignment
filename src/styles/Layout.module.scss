@@ -1,14 +1,116 @@
-.container{
+.container {
     max-width: 760px;
     margin: auto;
     width: 100%;
     padding: 0px 4.5%;
+    
 }
 
 
-.navLogo{
+.navLogo {
     height: 40px;
     width: 120px;
     margin-top: 16px;
     margin-bottom: 8px;
+}
+
+.storiesParent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: scroll;
+    scrollbar-width: none;    // Firefox
+    -ms-overflow-style: none; // Internet Explorer
+    
+    &::-webkit-scrollbar {
+      display: none;  // Chrome, Safari, etc.
+    }
+    .card {
+        width: 80px;
+        flex-shrink: 0;
+        height: 112px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 4px;
+        .profileImage {
+            height: 70px;
+            width: 70px;
+            border-radius: 100%;
+            overflow: hidden;
+            padding: 2px;
+            background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+            /* Define the gradient */
+            background-clip: padding-box;
+            /* Ensure the gradient only affects the border area */
+        }
+
+        .name {
+            text-align: center;
+            width: 100%;
+            margin-top: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 100%;
+        }
+    }
+}
+
+.popup{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    box-shadow: inset 0 0 93px 51px  rgba(0, 0, 0, 0.5);
+    padding: 0px 4.5%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1.5s;
+    .barHolder{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4px;
+        margin: 16px auto;
+        .bar{
+            background: rgba(255, 255, 255, 0.3);
+            height: 4px;
+            width: 100%;
+        }
+    }
+    .popUpProfile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4px;
+        .info{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 4px;
+            .image{
+                height: 40px;
+                width: 40px;
+                border-radius: 100%;
+                overflow: hidden;
+                padding: 2px;
+                background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+                /* Define the gradient */
+                background-clip: padding-box;
+            }
+            .name{
+                text-align: center;
+                margin-top: 0px;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 100%;
+                color: #fff;
+            }
+        }
+    }
 }
