@@ -49,6 +49,11 @@
                     "fileType":"image",
                     "filePath":"/assests/users/1/stories/story-9.jpeg",
                     "thumbnail":""
+                },
+                {
+                    "fileType":"video",
+                    "filePath":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+                    "thumbnail":""
                 }
             ]           
         },
@@ -115,6 +120,11 @@
                 {
                     "fileType":"image",
                     "filePath":"/assests/users/1/stories/story-9.jpeg",
+                    "thumbnail":""
+                },
+                {
+                    "fileType":"video",
+                    "filePath":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
                     "thumbnail":""
                 }
             ]            

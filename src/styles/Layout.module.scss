@@ -1,9 +1,13 @@
 .container {
-    max-width: 760px;
+    max-width: 480px;
     margin: auto;
     width: 100%;
-    padding: 0px 4.5%;
-    
+    padding: 0px 16px;
+    height: 743px;
+    margin-top: 5vh;
+    background: #fff;
+    border-radius: 16px;
+    position: relative;
 }
 
 
@@ -58,7 +62,9 @@
 }
 
 .popup{
-    position: fixed;
+    border-radius: 16px;
+    overflow: hidden;
+    position: absolute;
     top: 0px;
     right: 0px;
     width: 100%;
@@ -66,10 +72,44 @@
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     box-shadow: inset 0 0 93px 51px  rgba(0, 0, 0, 0.5);
     padding: 0px 4.5%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: 1.5s;
+   
+    .leftClickableSection{
+        height: 100%;
+        width: 52%;
+        background: transparent;
+        position: absolute;
+        left: 0;
+    }
+    .rightClickableSection{
+        height: 100%;
+        width: 52%;
+        background: transparent;
+        position: absolute;
+        right: 0;
+    }
+    .mediaSection{
+        position: absolute;
+        // background: red;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        .imageHolder{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: 1.5s;
+            height: 100%;
+            width: 100%;
+        }
+        .videoHolder{
+            width: -webkit-fill-available;
+            height: 100%;
+        }
+    }
+    .mainSection{
+        position: relative;
+        z-index: 1111;
+    }
     .barHolder{
         position: relative;
         display: flex;
