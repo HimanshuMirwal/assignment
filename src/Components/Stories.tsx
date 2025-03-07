@@ -46,8 +46,8 @@ function Stories({users}:{users:any}){
                 user && <div className={styles.popup} >
                     <div className={styles.mediaSection}>
                             {userStories[currentImageIndex].fileType == "image" && <div className={styles.imageHolder}  style={{backgroundImage:`url(${userStories[currentImageIndex].filePath})`}}></div>}
-                            {userStories[currentImageIndex].fileType == "video" && <video className={styles.videoHolder} autoPlay={true} muted={false} loop
-                            
+                            {userStories[currentImageIndex].fileType == "video" && <video className={styles.videoHolder} autoPlay={false} muted={false} loop   
+                                  controls                   
                             onLoadedMetadata={handleVideoDuration}
                             >
                                 <source src={`${userStories[currentImageIndex].filePath}`} type="video/mp4" />
@@ -79,7 +79,7 @@ function Stories({users}:{users:any}){
                     />
                     <div className={styles.mainSection}>
                         <div className={styles.barHolder}>
-                            {user.stories.map((story, index: any) => {
+                            {user.stories.map((_, index: any) => {
                                 return <div className={styles.bar}>
                                     <div
                                         style={{ background: "#fff", width: (currentImageIndex >= index) ? "100%" : "0%", height: "100%" }}
