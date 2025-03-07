@@ -18,6 +18,8 @@ function Stories({users}:{users:any}){
             return newIndex; 
           });
         };
+
+ 
     
         const currentStory = userStories[currentImageIndex];
         let intervalTime = 5000; // Default 5 seconds for images
@@ -43,7 +45,7 @@ function Stories({users}:{users:any}){
         {
                 user && <div className={styles.popup} >
                     <div className={styles.mediaSection}>
-                            {userStories[currentImageIndex].fileType == "image" && <div className={styles.imageHolder} style={{backgroundImage:`url(${userStories[currentImageIndex].filePath})`}}></div>}
+                            {userStories[currentImageIndex].fileType == "image" && <div className={styles.imageHolder}  style={{backgroundImage:`url(${userStories[currentImageIndex].filePath})`}}></div>}
                             {userStories[currentImageIndex].fileType == "video" && <video className={styles.videoHolder} autoPlay={true} muted={false} loop
                             
                             onLoadedMetadata={handleVideoDuration}
@@ -53,8 +55,11 @@ function Stories({users}:{users:any}){
                                   
                             }
                     </div>
-                    {/* <div className={styles.leftClickableSection} onClick={()=>{
+                    <div className={styles.leftClickableSection} onClick={()=>{
                         setCurrentImageIndex((prevIndex) => {
+                            if(prevIndex == 0 ){
+                                return userStories.length - 1   
+                            }
                             const newIndex = (prevIndex - 1) % userStories.length;
                             console.log({ newIndex });
                             return newIndex; 
@@ -63,18 +68,21 @@ function Stories({users}:{users:any}){
                     <div className={styles.rightClickableSection}
                     onClick={()=>{
                         setCurrentImageIndex((prevIndex) => {
+                            if(prevIndex > userStories.length ){
+                                return 0
+                            }
                             const newIndex = (prevIndex + 1) % userStories.length;
                             console.log({ newIndex });
                             return newIndex; 
                           });
                     }}
-                    /> */}
+                    />
                     <div className={styles.mainSection}>
                         <div className={styles.barHolder}>
                             {user.stories.map((story, index: any) => {
                                 return <div className={styles.bar}>
                                     <div
-                                        style={{ background: "#fff", width: (currentImageIndex >= index) ? "100%" : "0%", height: "100%", transition: currentImageIndex >= index  ? `${videoDuration*1000}` : "0s" }}
+                                        style={{ background: "#fff", width: (currentImageIndex >= index) ? "100%" : "0%", height: "100%", transition:currentImageIndex >= index ? `${videoDuration}s` : "0s" }}
                                     />
                                 </div>
                             })}
