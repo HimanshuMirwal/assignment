@@ -82,7 +82,7 @@ function Stories({users}:{users:any}){
                             {user.stories.map((story, index: any) => {
                                 return <div className={styles.bar}>
                                     <div
-                                        style={{ background: "#fff", width: (currentImageIndex >= index) ? "100%" : "0%", height: "100%", transition:currentImageIndex >= index ? `${videoDuration}s` : "0s" }}
+                                        style={{ background: "#fff", width: (currentImageIndex >= index) ? "100%" : "0%", height: "100%" }}
                                     />
                                 </div>
                             })}
